@@ -3,8 +3,8 @@ layout: home
 title: 
 date: 2020-11-20 
 ---
-## Hi, I'm Dumbarton 
- Vision Science blah blah blah
+## Vision Science 
+ A project made by a group of passionate students who want to share the wonders of science. 
 
 <a href="/about.html" class="highlighted">Read More</a>
 
