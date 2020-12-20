@@ -8,9 +8,9 @@
 # -----------BASE SETTINGS---------------#
 #========================================#
 
-title: Dumbarton 
+title: Vision Science 
 email: 
-description: a minimalistic jekyll theme for academics
+description: A project made by a group of passionate students who want to share the wonders of science. 
 baseurl:                                       # the subpath of your site, e.g. /blog
 url: "https://dumbarton.netlify.app/"          # the base hostname & protocol for your site, e.g. http://example.com
 image: /assets/img/dumbarton.png               # used to generate site link preview
