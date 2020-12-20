@@ -38,7 +38,7 @@ phonenumber:
 # -----------BLOG SETTINGS---------------#
 #========================================#
 
-tags:  post jekyll styleguide ipsum
+tags:  Life-Science Chemistry Physics
 
 comments: false                                     # Used to enable comments on blog posts
 gitalk_client_id:             
