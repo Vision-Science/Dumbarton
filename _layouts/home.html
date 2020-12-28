@@ -40,7 +40,6 @@ layout: default
         <h5 class="card-title">{{ page.title }}</h5>
         <p class="card-text">{{ content | markdownify }}</p>
         {% if site.home_option == "education" %}
-          {% include education.html %}
         {% elsif site.home_option == "timeline" %}
           {% include timeline.html %}
         {% elsif site.home_option =="skills" %}
@@ -52,7 +51,7 @@ layout: default
   </div>
 </div>
 
-<!-- HOME HIGHLIGHTS SECTION --> 
+<!-- HOME HIGHLIGHTS SECTION -->
 <h5 class="card-title text-center mb-3 border-0"></h5>
 {% if site.animate %}
 <div class="card mx-auto animate__animated animate__slideInUp animate__delay-1s" style="max-width: 100%;">
@@ -74,7 +73,7 @@ layout: default
       {% endfor %}
     </ul>
   </div>
-  <div class="card-body">          
+  <div class="card-body">
       <div class="tab-content mt-3">
         {% for section in site.data.sections %}
           {% if section.first %}
@@ -88,14 +87,14 @@ layout: default
                 <p class="card-text">{{section.description}}</p>
               </div>
             {% endif %}
-          {% else %}  
+          {% else %}
             {% if section.name == "Presentations" %}
-              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
+              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">
                 <h5 class="card-title text-center" style="font-family:Courgette;">{{section.description}}</h5>
-                <p class="card-text">{% bibliography -f presentations %}</p>              
+                <p class="card-text">{% bibliography -f presentations %}</p>
               </div>
             {% elsif section.name == "Projects" %}
-              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
+              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">
                 <h5 class="card-title text-center" style="font-family:Courgette;">{{section.description}}</h5>
                   {% for projects in site.data.projects %}
                   <div class="media  mt-3">
@@ -112,39 +111,12 @@ layout: default
                     </div>
                   </div>
                   {% endfor %}
-                </div>        
-              </div>
-            {% elsif section.name == "Teaching" %}
-              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
-                <h5 class="card-title text-center" style="font-family:Courgette;">{{section.description}}</h5>
-                    {% for courses in site.data.teaching %}
-                    <div class="list-group">
-                      <a href="#" class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                          <h5 class="mb-1">{{ courses.Schoool }}</h5>
-                          <p>{{ courses.Program }}</p>
-                          <small>{{ courses.StartDate }} - {{ courses.EndDate }}</small>
-                        </div>
-                        <p class="mb-1">{{ courses.description }}</p>
-                        <small>Donec id elit non mi porta.</small>
-                      </a>
-                    </div>
-                    {% endfor %}
-              </div>
-            {% elsif section.name == "Coursework" %}
-              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
-                <h5 class="card-title text-center" style="font-family:Courgette;">{{section.description}}</h5>
-                <div class="list-group">
-                {% for courses in site.data.courses %}
-                  <button type="button" class="list-group-item list-group-item-action">{{ courses.Course }}</button>
-                {% endfor %}
                 </div>
-
               </div>
             {% else %}
-              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">  
+              <div class="tab-pane overflow-auto" id="{{section.id}}" role="tabpanel" aria-labelledby="{{section.id}}-tab">
                 <h5 class="card-title text-center"><a href="/{{ section.url }}" class="highlighted">{{section.description}}</a></h5>
-                <p class="card-text">{{ section.content }} </p>              
+                <p class="card-text">{{ section.content }} </p>
               </div>
             {% endif %}
           {% endif %}
@@ -164,7 +136,7 @@ layout: default
     e.preventDefault()
     $(this).tab('show')
     })
-</script> 
+</script>
 
 <!-- OPTIONAL TOAST JS FUNCTION-->
 <script>
@@ -214,4 +186,3 @@ $('.collapse').collapse()
 <script>
 $('.show').show()
 </script>
-
