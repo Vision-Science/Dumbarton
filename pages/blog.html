@@ -3,7 +3,7 @@ layout: page
 permalink: /blog.html
 title: My Blog
 description: I write about cyber threat intelligence
-header-img:  
+header-img:
 last-updated: 2020-10-30 5:55 PM
 ---
 
@@ -17,7 +17,7 @@ last-updated: 2020-10-30 5:55 PM
           <!-- Blog Post -->
           {% for post in site.posts %}
             <div class="card mb-4">
-              <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+              <img class="card-img-top" src="{{ post.image }}" alt="Card image cap">
               <div class="card-body">
                 <h2 class="card-title">{{ post.title }}</h2>
                 <p class="card-text">{{ post.description }}</p>
@@ -89,7 +89,7 @@ last-updated: 2020-10-30 5:55 PM
           <div class="card my-4">
             <h5 class="card-header">Twitter Widget</h5>
             <div class="card-body">
-              <a class="twitter-timeline" data-height="450" data-theme="light" href="https://twitter.com/{{ site.twitter }}?ref_src=twsrc%5Etfw">Tweets by {{ site.twitter }}</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>           
+              <a class="twitter-timeline" data-height="450" data-theme="light" href="https://twitter.com/{{ site.twitter }}?ref_src=twsrc%5Etfw">Tweets by {{ site.twitter }}</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
           </div>
 
