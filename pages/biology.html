@@ -12,8 +12,27 @@ last-updated: 2021-1-24 6:08 PM
   This is a test paragraph to see if I formatted everything correctly.
 </p>
 <form>
-  <button formaction="google.com">Go to Google!</button>
+  <button formaction="google.com" id="button">Go to Google!</button>
 </form>
 <form>
-  <button formaction="physics.html">Go to Physics!</button>
+  <button formaction="physics.html" id="button">Go to Physics!</button>
 </form>
+<style type="text/css">
+#button {
+ background-color: #bbb;
+ padding: .5em;
+ -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+ border-radius: 6px;
+ color: #fff;
+ font-family: 'Oswald';
+ font-size: 20px;
+ text-decoration: none;
+ border: none;
+}
+#submit:hover {
+ border: none;
+ background: orange;
+ box-shadow: 0px 0px 1px #777;
+}
+</style>
